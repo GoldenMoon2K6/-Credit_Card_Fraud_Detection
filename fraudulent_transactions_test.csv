@@ -1,0 +1,2 @@
+Unnamed: 0,trans_date_trans_time,cc_num,merchant,category,amt,first,last,gender,street,city,state,zip,lat,long,city_pop,job,dob,trans_num,unix_time,merch_lat,merch_long,is_fraud
+163504,2020-08-17 15:59:24,4755696071492,fraud_Auer-West,shopping_net,1037.36,Robert,Evans,M,01892 Patricia Vista Apt. 828,Sachse,TX,75048,32.9643,-96.6012,20328,Site engineer,1985-06-20,7d804f3f0e8d14f1792bf880be9657fc,1376755164,32.583071999999994,-95.966064,1
