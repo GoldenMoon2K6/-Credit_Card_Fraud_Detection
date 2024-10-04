@@ -58,3 +58,4 @@ train_fraud.to_csv('fraudulent_transactions_train.csv', index=False)
 test_fraud.to_csv('fraudulent_transactions_test.csv', index=False)
 
 print("Fraudulent transactions saved to 'fraudulent_transactions_train.csv' and 'fraudulent_transactions_test.csv'.")
+# For Datasets Use
