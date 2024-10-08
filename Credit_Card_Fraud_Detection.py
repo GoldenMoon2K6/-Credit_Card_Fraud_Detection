@@ -5,17 +5,14 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 
 # File paths
-train_file = '/Users/nithinreddy/Desktop/internship hemachandra/Credit_Card_Fraud_Detection/Credit_Card_Fraud_Detection_Datasets/fraudTrain.csv'
-test_file = '/Users/nithinreddy/Desktop/internship hemachandra/Credit_Card_Fraud_Detection/Credit_Card_Fraud_Detection_Datasets/fraudTest.csv'
+train_file = 'E:/Internship/internship hemachandra/Credit_Card_Fraud_Detection/Credit_Card_Fraud_Detection_Datasets/fraudTrain.csv'
+test_file = 'E:/Internship/internship hemachandra/Credit_Card_Fraud_Detection/Credit_Card_Fraud_Detection_Datasets/fraudTest.csv'
 
 # Load datasets (train and test)
 train_df = pd.read_csv(train_file)
 test_df = pd.read_csv(test_file)
 
-# Limit datasets to 600 rows
-train_df = train_df.sample(n=600, random_state=42)
-test_df = test_df.sample(n=600, random_state=42)
-
+# Remove the limit for training the whole dataset
 # Drop non-numeric columns from both datasets
 train_numeric = train_df.select_dtypes(include=[np.number])
 test_numeric = test_df.select_dtypes(include=[np.number])
@@ -53,9 +50,9 @@ test_df['is_fraud'] = test_predictions
 train_fraud = train_df[train_df['is_fraud'] == 1]
 test_fraud = test_df[test_df['is_fraud'] == 1]
 
-# Save the fraud details to CSV files
-train_fraud.to_csv('fraudulent_transactions_train.csv', index=False)
-test_fraud.to_csv('fraudulent_transactions_test.csv', index=False)
+# Save the fraud details to CSV files in the specified output path
+output_path = 'E:/Internship/internship hemachandra/Credit_Card_Fraud_Detection/'
+train_fraud.to_csv(f'{output_path}fraudulent_transactions_train.csv', index=False)
+test_fraud.to_csv(f'{output_path}fraudulent_transactions_test.csv', index=False)
 
 print("Fraudulent transactions saved to 'fraudulent_transactions_train.csv' and 'fraudulent_transactions_test.csv'.")
-# For Datasets Use
